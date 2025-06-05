@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'authentication.apps.AuthenticationConfig',
+    'authentication_dnd.apps.AuthenticationConfig',
     "rest_framework",
     "rest_framework.authtoken",
     "rest_framework_simplejwt",
@@ -63,6 +63,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
+    'allauth.account.middleware.AccountMiddleware'
 ]
 
 ROOT_URLCONF = 'panDnDmonium.urls'
@@ -146,22 +147,19 @@ SIMPLE_JWT = {
     "SIGNING_KEY": "complexsigningkey",  # generate a key and replace me
     "ALGORITHM": "HS512",}
 
-
-REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": [
-        "rest_framework_simplejwt.authentication.JWTAuthentication",
-    ]
-}
-
 SITE_ID = 1
 
-ACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*', 'role*']
+
 ACCOUNT_EMAIL_VERIFICATION = "none"
+
 
 REST_AUTH = {
     "USE_JWT": True,
     "JWT_AUTH_HTTPONLY": False,
 }
+
+
 
 if DEBUG:
     CORS_ALLOW_ALL_ORIGINS = True
@@ -170,3 +168,15 @@ else:
         "http://localhost:3000/",
         "http://127.0.0.1:3000/",
     ]
+
+AUTH_USER_MODEL = 'authentication_dnd.CustomUser'
+
+
+REST_AUTH_REGISTER_SERIALIZERS = {
+    'REGISTER_SERIALIZER': 'authentication_dnd.serializers.CustomRegisterSerializer',
+}
+
+REST_AUTH_SERIALIZERS = {
+    'LOGIN_SERIALIZER': 'authentication_dnd.serializers.CustomLoginSerializer',
+    'USER_DETAILS_SERIALIZER': 'authentication_dnd.serializers.CustomUserDetailsSerializer',  # <--- dodaj tę linię
+}
