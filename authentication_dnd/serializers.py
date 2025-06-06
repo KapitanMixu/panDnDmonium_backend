@@ -15,6 +15,11 @@ class CustomRegisterSerializer(RegisterSerializer):
         data['role'] = self.validated_data.get('role', 'player')
         return data
 
+    def get_response_data(self, user):
+        data = super().get_response_data(user)
+        data['role'] = user.role
+        return data
+
 
 class CustomLoginSerializer(LoginSerializer):
     def validate(self, attrs):
