@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     "dj_rest_auth",
     "dj_rest_auth.registration",
     "corsheaders",
-    'adventurers',
+    'players',
+    'drf_yasg',
 
 
 ]
@@ -178,5 +179,5 @@ REST_AUTH_REGISTER_SERIALIZERS = {
 
 REST_AUTH_SERIALIZERS = {
     'LOGIN_SERIALIZER': 'authentication_dnd.serializers.CustomLoginSerializer',
-    'USER_DETAILS_SERIALIZER': 'authentication_dnd.serializers.CustomUserDetailsSerializer',  # <--- dodaj tę linię
+    'USER_DETAILS_SERIALIZER': 'authentication_dnd.serializers.CustomUserDetailsSerializer',
 }
