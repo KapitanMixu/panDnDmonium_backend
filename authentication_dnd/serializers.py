@@ -1,7 +1,7 @@
 from dj_rest_auth.registration.serializers import RegisterSerializer
 from dj_rest_auth.serializers import LoginSerializer
-from rest_framework import serializers
 from dj_rest_auth.serializers import UserDetailsSerializer
+from rest_framework import serializers
 
 class CustomRegisterSerializer(RegisterSerializer):
     ROLE_CHOICES = [
@@ -26,9 +26,6 @@ class CustomLoginSerializer(LoginSerializer):
         data = super().validate(attrs)
         data['role'] = self.user.role
         return data
-
-from dj_rest_auth.serializers import UserDetailsSerializer
-from rest_framework import serializers
 
 class CustomUserDetailsSerializer(UserDetailsSerializer):
     role = serializers.CharField(source='role')

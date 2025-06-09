@@ -6,18 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e0491f18-4a4e-4ada-a12c-ad22e6877744" name="Changes" comment="Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adventurers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/players/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adventurers/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/players/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adventurers/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/players/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adventurers/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/players/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adventurers/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/players/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adventurers/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/players/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adventurers/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/players/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adventurers/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/players/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panDnDmonium/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/panDnDmonium/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panDnDmonium/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/panDnDmonium/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,16 +51,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.forms.executor&quot;: &quot;Run&quot;,
-    &quot;Python.settings.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/PythonProjects/panDnDmonium_backend&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.forms.executor": "Run",
+    "Python.settings.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "#3 on feat/addCharacterModel",
+    "last_opened_file_path": "D:/PythonProjects/panDnDmonium_backend/players"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PythonProjects\panDnDmonium_backend\players" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
