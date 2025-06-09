@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0491f18-4a4e-4ada-a12c-ad22e6877744" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/players/permissions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/players/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/players/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication_dnd/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/authentication_dnd/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panDnDmonium/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/panDnDmonium/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/players/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/players/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/players/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/players/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +57,7 @@
     "Python.settings.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feat/addCharacterModel",
+    "git-widget-placeholder": "#3 on feat/addCharacterModel",
     "last_opened_file_path": "D:/PythonProjects/panDnDmonium_backend/players"
   }
 }]]></component>
