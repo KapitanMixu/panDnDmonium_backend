@@ -29,6 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -50,6 +51,7 @@ INSTALLED_APPS = [
     "corsheaders",
     'players',
     'drf_yasg',
+    'spells'
 
 
 ]
@@ -188,3 +190,5 @@ REST_AUTH_SERIALIZERS = {
     'LOGIN_SERIALIZER': 'authentication_dnd.serializers.CustomLoginSerializer',
     'USER_DETAILS_SERIALIZER': 'authentication_dnd.serializers.CustomUserDetailsSerializer',
 }
+
+DND5E_API_BASE_URL = "https://www.dnd5eapi.co"

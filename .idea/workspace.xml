@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0491f18-4a4e-4ada-a12c-ad22e6877744" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/spells/management/commands/import_spells.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spells/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spells/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panDnDmonium/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/panDnDmonium/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panDnDmonium/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/panDnDmonium/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,12 +62,13 @@
     "Python.settings.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "#3 on feat/addCharacterModel",
-    "last_opened_file_path": "D:/PythonProjects/panDnDmonium_backend/players"
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/PythonProjects/panDnDmonium_backend/spells"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PythonProjects\panDnDmonium_backend\spells" />
       <recent name="D:\PythonProjects\panDnDmonium_backend\players" />
     </key>
   </component>
@@ -112,6 +118,11 @@
           <url>file://$PROJECT_DIR$/authentication_dnd/models.py</url>
           <line>1</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/panDnDmonium/urls.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -19,6 +19,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/auth/', include('authentication_dnd.urls')),
     path('player/', include('players.urls')),
+    path("", include("spells.urls")),
+
 
     # Swagger and ReDoc documentation routes
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
