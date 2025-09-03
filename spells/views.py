@@ -11,7 +11,7 @@ class SpellViewSet(viewsets.ModelViewSet):
     @decorators.action(detail=True, methods=["get"])
     def details(self, request, pk=None):
         spell = self.get_object()
-        url = f"https://www.dnd5eapi.co/api/spells/{spell.api_id}"
+        url = f"https://www.dnd5eapi.co/api/spells/{spell.id}"
         r = requests.get(url)
 
         if r.status_code != 200:
