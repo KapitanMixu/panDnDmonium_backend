@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "corsheaders",
     'players',
     'drf_yasg',
+    'spells'
 
 
 ]
