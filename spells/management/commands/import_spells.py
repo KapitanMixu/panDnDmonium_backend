@@ -1,12 +1,13 @@
 import requests
 from django.core.management.base import BaseCommand
 from spells.models import Spell
+from django.conf import settings
 
 class Command(BaseCommand):
     help = "Imports spells from the DnD 5e API (light version)"
 
     def handle(self, *args, **kwargs):
-        base_url = "https://www.dnd5eapi.co"
+        base_url = settings.DND5E_API_BASE_URL
         list_url = f"{base_url}/api/spells"
 
         # Get the list of all spells
