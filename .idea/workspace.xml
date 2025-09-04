@@ -5,12 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0491f18-4a4e-4ada-a12c-ad22e6877744" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/spells/management/commands/import_spells.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spells/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spells/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/character_structure/management/commands/import_classes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/character_structure/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/character_structure/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spells/management/commands/import_class_spell_list.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panDnDmonium/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/panDnDmonium/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panDnDmonium/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/panDnDmonium/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/players/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/players/migrations/0002_character_delete_adventurer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/players/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/players/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/players/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/players/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spells/management/commands/import_spells.py" beforeDir="false" afterPath="$PROJECT_DIR$/spells/management/commands/import_spells.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spells/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spells/migrations/0002_remove_spell_api_id_alter_spell_id.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spells/migrations/0003_spell_components_spell_updated_at_alter_spell_level.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spells/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/spells/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spells/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/spells/serializers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,16 +68,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.forms.executor": "Run",
-    "Python.settings.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/PythonProjects/panDnDmonium_backend/spells"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.forms.executor&quot;: &quot;Run&quot;,
+    &quot;Python.import_class_spell_list.executor&quot;: &quot;Run&quot;,
+    &quot;Python.settings.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/spells-light-model&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/PythonProjects/panDnDmonium_backend/spells&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\PythonProjects\panDnDmonium_backend\spells" />
@@ -123,6 +136,11 @@
           <url>file://$PROJECT_DIR$/panDnDmonium/urls.py</url>
           <line>21</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/panDnDmonium/urls.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
