@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+import requests
 
 # PHB classes and subclasses map
 CLASS_SUBCLASS_MAP = {
@@ -112,6 +113,18 @@ SUBCLASS_CHOICES = [
     for sub_key, sub_name in cls["subclasses"].items()
 ]
 
+class CharacterStats(models.Model):
+    strength = models.PositiveIntegerField(default=10)
+    dexterity = models.PositiveIntegerField(default=10)
+    constitution = models.PositiveIntegerField(default=10)
+    intelligence = models.PositiveIntegerField(default=10)
+    wisdom = models.PositiveIntegerField(default=10)
+    charisma = models.PositiveIntegerField(default=10)
+
+    def __str__(self):
+        return f"STR {self.strength}, DEX {self.dexterity}, CON {self.constitution}, " \
+               f"INT {self.intelligence}, WIS {self.wisdom}, CHA {self.charisma}"
+
 
 class Character(models.Model):
     RACE_CHOICES = [
@@ -133,13 +146,11 @@ class Character(models.Model):
     subclass = models.CharField(max_length=50, choices=SUBCLASS_CHOICES, null=True, blank=True)
     race = models.CharField(max_length=20, choices=RACE_CHOICES)
 
-    # STATS
-    strength = models.PositiveIntegerField(default=10)
-    dexterity = models.PositiveIntegerField(default=10)
-    constitution = models.PositiveIntegerField(default=10)
-    intelligence = models.PositiveIntegerField(default=10)
-    wisdom = models.PositiveIntegerField(default=10)
-    charisma = models.PositiveIntegerField(default=10)
+    stats = models.OneToOneField(
+        CharacterStats,
+        on_delete=models.CASCADE,
+        related_name="character"
+    )
 
     owner = models.ForeignKey(
         settings.AUTH_USER_MODEL,
@@ -147,7 +158,44 @@ class Character(models.Model):
         related_name="characters"
     )
 
+    def get_possible_spells(self):
+        url = f"{settings.API_URL}/classes/{self.character_class}/"
+        response = requests.get(url)
+        if response.status_code == 200:
+            data = response.json()
+            spells = data.get("possible_spells", [])
+            return [s for s in spells if s.get("level", 0) <= self.level]
+        return []
+
+    def get_prepared_spells(self):
+        possible_ids = {s["id"] for s in self.get_possible_spells()}
+        return Spell.objects.filter(
+            prepared_for_characters__character=self, id__in=possible_ids
+        )
+
     def __str__(self):
         sub = f" ({self.subclass})" if self.subclass else ""
         return f"{self.name} the {self.race} {self.character_class.capitalize()}{sub} (Level {self.level})"
 
+
+
+from spells.models import Spell
+
+
+class PreparedSpell(models.Model):
+    character = models.ForeignKey(
+        Character,
+        on_delete=models.CASCADE,
+        related_name="prepared_spells"
+    )
+    spell = models.ForeignKey(
+        Spell,
+        on_delete=models.CASCADE,
+        related_name="prepared_for_characters"
+    )
+
+    class Meta:
+        unique_together = ("character", "spell")
+
+    def __str__(self):
+        return f"{self.character.name} prepared {self.spell.name}"
