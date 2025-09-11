@@ -25,10 +25,10 @@ class Command(BaseCommand):
                 defaults={
                     "name": s["name"],
                     "level": details.get("level", 0),
-                    "school": details.get("school", {}).get("name", None),
                     "ritual": details.get("ritual", False),
                     "concentration": details.get("concentration", False),
                     "components": details.get("components", []),
+                    "casting_time": details.get("casting_time", "")
                 }
             )
 

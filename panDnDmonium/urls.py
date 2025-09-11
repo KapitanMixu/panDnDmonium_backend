@@ -20,6 +20,7 @@ urlpatterns = [
     path('api/auth/', include('authentication_dnd.urls')),
     path('player/', include('players.urls')),
     path("", include("spells.urls")),
+    path('', include('character_structure.urls')),
 
 
     # Swagger and ReDoc documentation routes

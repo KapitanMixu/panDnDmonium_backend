@@ -6,3 +6,5 @@ django-allauth
 dj-rest-auth[with_social]
 django-cors-headers
 drf-yasg
+beautifulsoup4
+
