@@ -30,7 +30,7 @@ After starting the server for the first time, follow these steps:
 
 2. Import initial data:
 2. python3 manage.py import_spells
-python3 manage.py import_phb_classes
+python3 manage.py import_classes
 python3 manage.py import_class_spell_list
 
 These commands will load spells, Player's Handbook classes, and class-spell associations into the database.
